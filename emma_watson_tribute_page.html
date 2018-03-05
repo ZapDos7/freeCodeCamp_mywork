@@ -4,16 +4,54 @@
 	<title>
 		Tribute Page to Emma Watson
 	</title>
-	<style>
+<style type="text/css">
 	body {
   margin-top: 60px;
-}
+  }
 
-p {
-  font-size: xx-small;
-}
+  p {
+    font-size: xx-small;
+  }
+  .row {
+    min-width: 600px;
+    display: flex;
+    flex-direction: flex;
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+  @media only screen and (max-width: 650px)
+  {
+    .row {
+      flex-direction: column; !important
+    }
+    [class*="col-"] {
+      flex: 1;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      /*width: 550px; !important*/
+    }
+  }
 </style>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!--<script src="jquery-3.3.1.min.js"></script>-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+//  $(window).height();   // returns height of browser viewport
+//  $(document).height(); // returns height of HTML document (same as pageHeight in screenshot)
+ // $(window).width();   // returns width of browser viewport
+  //$(document).width(); // returns width of HTML document (same as pageWidth in screenshot)
+  //const myHeight = screen.height;
+  //const myWidth = screen.width;
+
+  if (screen.width < 500)
+  {
+    document.getElementById("target").style.setProperty(flex-direction, "column");
+  }
+
+</script>
+
 </head>
 <body>
 	<div class="container">
@@ -26,8 +64,8 @@ p {
           <div class="caption text-center">Emma Watson, in the pondium, explaining why gender equality involves men as well as women.</div>
         </div>
 
-        <div class="row">
-          <div class="col-xs-6"> 
+        <div class="row" id="target">
+          <div class="col col-xs-6"> 
         <h3>Her life - Acting</h3>
           <ul>
             <li><strong>1990</strong> - Born in Paris, France</li>
@@ -43,7 +81,7 @@ p {
             <li><strong>2017</strong> - Played in <i>The Circle</i>, and starred in the live-action adaptation of the musical romantic fantasy film <i>Beauty and the Beast</i> as <i>Belle</i>.</li>
           </ul>
         </div>
-      <div class="col-xs-6">
+      <div class="col col-xs-6">
           <h3>Her Life - Achievements</h3>
           <ul>
             <li>From <strong>2011</strong> to <strong>2014</strong>, Watson split her time between working on film projects and continuing her education, studying at Brown University and Worcester College, Oxford and graduating from Brown with a bachelor's degree in English literature in <strong>May 2014</strong>.</li>
