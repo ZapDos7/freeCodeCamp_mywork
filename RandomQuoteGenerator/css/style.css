@@ -25,3 +25,10 @@ body {
 	/*border: #DEE1E7;
 	border-style: solid;*/
 }
+#footer {
+	font-family: 'ABeeZee';
+	font-weight: bold;
+	padding-top: 5%; 
+	color: #DEE1E7;
+
+}
