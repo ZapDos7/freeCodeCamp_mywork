@@ -1,0 +1,26 @@
+.container {
+    border: 5px solid #ffbc5c;
+    display: flex; /* egeneto flexbox */
+    flex-direction: row; /* default. column => top to bot */
+    justify-content: /*center*//*space-around*//*space-evenly*/flex-end;
+    flex-wrap: wrap;
+}
+.home {
+    margin-right: auto;
+}
+.container>div {
+    flex:1; /* flexbox does the math, instead of me doing WIDTH/(number of components) */
+    /*flex-grow,flex-shrink,flex-basis*/
+    /*height: 100%;*/
+    align-items: center; 
+    /*flex 1 1 0; == 
+    flex-grow:1;
+    flex-shrink:1;
+    flex-basis:0;
+    */
+}
+@media all and (max-width:400px;) {
+    .container>div{
+        flex: 1 1 100%;
+    }
+}
